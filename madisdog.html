@@ -1,31 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Madi's Dogz</title>
+    <title>Sculpting Realities–House</title>
     <meta name="description" content="Sculpting Realities day 1 Demo">
     <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
     <script>  </script>
     <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
     <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
-    
-   <script>
-  AFRAME.registerComponent("click-listener", {
-    init: function() {
-      this.el.addEventListener("click", function(e) {
-        console.log(e.target)
-        e.target.setAttribute('scale', {x: 2, y: 2, z: 2});
-        });
-      this.el.addEventListener("mouseenter", function(e) {
-        console.log(e.target)
-        e.target.setAttribute('scale', {x: 1.5, y: 1.5, z: 1.5});
-        });
-      this.el.addEventListener("mouseleave", function(e) {
-        console.log(e.target)
-        e.target.setAttribute('scale', {x: 1, y: 1, z: 1});
-        });
-      }
-  });
-</script>
+  
 
   </head>
   
@@ -35,13 +17,7 @@
     
     <a-scene>
       <a-entity environment="preset: forest;"></a-entity>
-       <! animation="property:position; to: x x x; dur:x; easing:linear; loop:true" >
 
-
-      <a-obj-model id="duck" src="htdocs/dog/duck.obj"
-         scale="0.2 0.2 0.2" position="0 0 -8" color="yellow"
-         ></a-obj-model>
-      
         
 <a-entity id="come" position="0.9 0.05 3" rotation="0 10 0"
           animation="property: position; to: 1 0.05 0.5; dur:150; dir: normal; startEvents: mouseenter; easing: easeOutQuad"
@@ -104,9 +80,9 @@
       <a-box id="middle" position="0 1 -1" width="0.3" height="0.08" depth="0.06" color="#f59369" material="" geometry=""></a-box>
         <a-box id="left side" position="0.18 1 -1" width="0.1" height="0.1" depth="0.08" color="#f59369" material="" geometry=""></a-box>
         <a-box id="right side" position="-0.18 1 -1" width="0.1" height="0.1" depth="0.08" color="#f59369" material="" geometry=""></a-box>
-      </a-entity>>
+      </a-entity>
 
-      
+
 ----------------------------------------------------------
 
 
@@ -428,14 +404,6 @@
     </a-scene>
     
     
-    <! animation="property: position; from: 0 0.2 1.72; to: 0 0.5 1.72 ; dur: 450; loop: true; dir: alternate"
-    animation="property: position; from: 0 0.1 1.8; to: 0 0.3 1.8 ; dur: 450; loop: true; dir: alternate" 
-    
-    
-    animation="property:position; from: 0 0.4 1; to: 0 0.7 1; dur: 500; easing:linear; loop: true; startEvents:mouseenter"
-          animation_2="property:position; from: 0 0.7 1; to: 0 0.4 1; dur: 500; easing:linear; loop: true; startEvents:mouseleave"
-    
-    a-camera raycaster crawling-cursor="target: #my-cursor">
     
     
     
